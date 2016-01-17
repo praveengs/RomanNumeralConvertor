@@ -1,11 +1,16 @@
 package com.home.rc;
 
 
+import com.home.rc.common.CommonConstants;
+
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 
 /**
- * Created by prave_000 on 16/01/2016.
+ * Created by Praveen G S on 16/01/2016.
+ * <p>
+ * This class is an implementation of the RomanNumeralGenerator class.
+ * This class implements the generate method to find the roman numerals.
  */
 public class NumberConverter implements RomanNumeralGenerator {
 
@@ -54,7 +59,7 @@ public class NumberConverter implements RomanNumeralGenerator {
     public String generate(int number) {
         //Check for upper and lower boundaries
         if (number < 1 || number > 3999) {
-            throw new RuntimeException("Illegal number. Number should be an integer between 1 and 3999.");
+            throw new RuntimeException(CommonConstants.OUT_OF_BOUNDS_EXCEPTION_STRING);
         }
 
         return generateRomanNumeral(keyArray, 0, number);
@@ -68,12 +73,12 @@ public class NumberConverter implements RomanNumeralGenerator {
      * numeral can be used. The remaining value of the number (after subtraction)
      * is then passed to the next call.
      * Else if the negation gave value less than zero, we need to try the next element in the array.
-     *
+     * <p>
      * Continue this until array gets exhausted or the number is reduced to 0; in which case return.
      *
      * @param intArray the keys in the static map
-     * @param index the current index of the intArray that is being checked
-     * @param number the number to convert to roman numeral
+     * @param index    the current index of the intArray that is being checked
+     * @param number   the number to convert to roman numeral
      * @return the roman equivalent
      */
     private String generateRomanNumeral(Integer[] intArray, int index, int number) {

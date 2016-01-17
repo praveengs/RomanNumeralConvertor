@@ -1,5 +1,6 @@
 package com.home.rc;
 
+import com.home.rc.common.CommonConstants;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -28,14 +29,14 @@ public class NumberConverterTest {
     @Test
     public void testExceptionForNumberLessThanOne (){
         thrown.expect(RuntimeException.class);
-        thrown.expectMessage("Illegal number. Number should be an integer between 1 and 3999.");
+        thrown.expectMessage(CommonConstants.OUT_OF_BOUNDS_EXCEPTION_STRING);
         numberConverter.generate(0);
     }
 
     @Test
     public void testExceptionForNumberGreaterThan3999 () {
         thrown.expect(RuntimeException.class);
-        thrown.expectMessage("Illegal number. Number should be an integer between 1 and 3999.");
+        thrown.expectMessage(CommonConstants.OUT_OF_BOUNDS_EXCEPTION_STRING);
         numberConverter.generate(4000);
     }
 

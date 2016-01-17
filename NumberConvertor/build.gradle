@@ -1,8 +1,12 @@
-dependencies {
-    //compile 'org.springframework:spring-core:4.2.3.RELEASE'
-    //compile 'org.springframework:spring-context:4.2.3.RELEASE'
-    //compile 'cglib:cglib:2.2.2'
-    //compile 'com.google.code.gson:gson:2.5'
+apply plugin: 'application'
 
+mainClassName = "com.home.rc.main.Application"
+
+run{
+    standardInput = System.in
+}
+
+
+dependencies {
     testCompile 'junit:junit:4.11'
 }

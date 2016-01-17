@@ -1,7 +1,10 @@
 package com.home.rc;
 
 /**
- * Created by prave_000 on 16/01/2016.
+ * Created by Praveen G S on 16/01/2016.
+ *
+ * The interface for the roman numeral generator.
+ *
  */
 public interface RomanNumeralGenerator {
     /**
