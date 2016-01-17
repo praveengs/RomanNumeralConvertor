@@ -1,6 +1,5 @@
 package com.home.rc;
 
-import com.home.rc.exception.InvalidInputException;
 import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
@@ -11,7 +10,7 @@ import org.junit.rules.ExpectedException;
  */
 public class NumberConverterTest {
 
-    private NumberConverter numberConverter;
+    private RomanNumeralGenerator numberConverter;
 
     @Rule
     public ExpectedException thrown= ExpectedException.none();
